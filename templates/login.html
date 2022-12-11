@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/login.css'%}">
+  <title>Sign in</title>
+
+</head>
+
+<body>
+
+  <main class="form1">
+    <form method="post" action="/login">
+      {% csrf_token %}
+      <h1 class="ha">Sign Up</h1>
+
+      <div class="inp">
+        <label class="lbl" for="text">Username</label><br>
+        <input type="text" class="intxt" id="floatingInput" name="username" placeholder="Username"><br>
+      </div>
+
+      <div class="inp">
+        <label class="lbl" for="inputPassword">Password</label><br>
+        <input type="password" class="intxt" id="floatingPassword" name="password" placeholder="Password">
+      </div>
+
+      <div class="checkbox-myown">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+
+
+      <button class="mybutton" type="submit">Sign in</button>
+      
+    </form>
+  </main>
+
+  
+
+</body>
+
+</html>
